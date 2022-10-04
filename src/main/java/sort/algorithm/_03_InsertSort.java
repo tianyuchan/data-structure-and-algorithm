@@ -1,4 +1,4 @@
-package sort;
+package sort.algorithm;
 
 /**
  * @Classname : _03_InsertSort
