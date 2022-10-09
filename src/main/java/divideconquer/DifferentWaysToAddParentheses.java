@@ -15,7 +15,7 @@ public class DifferentWaysToAddParentheses {
     public static void main(String[] args) {
         DifferentWaysToAddParentheses my = new DifferentWaysToAddParentheses();
         List<Integer> ans = my.diffWaysToCompute("2-1-1");
-        System.out.println();
+        System.out.println(ans);
     }
 
     /**
