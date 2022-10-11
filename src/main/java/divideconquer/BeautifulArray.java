@@ -4,7 +4,8 @@ import java.util.*;
 
 /**
  * @Classname : BeautifulArray
- * @Description :
+ * @Description : 932. 漂亮数组
+ * https://leetcode.cn/problems/beautiful-array/
  * @Author : chentianyu
  * @Date 2022/10/11 21:58
  */
