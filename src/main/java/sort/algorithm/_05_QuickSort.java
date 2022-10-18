@@ -25,12 +25,13 @@ public class _05_QuickSort extends SortUtils implements Sort {
     }
 
     private void quickSort(int[] nums, int l, int r) {
-        if (l + 1 >= r) {  // 左闭右开
+        // 左闭右开
+        if (l + 1 >= r) {
             return;
         }
         int p = l, q = r - 1;
         while (true) {
-            // 注意：以左边num[l]为基准，必须从右边开始执行，从而保证停止位置的值一定小于等于num[l] ！！！
+            // 注意：左边num[l]为基准，必须从右边开始执行，从而保证停止位置的值一定小于等于num[l] ！！！
             // 若以左边num[l]为基准，从左边开始执行，停止的位置一定是大于等于num[l]的，若大于num[l]的值与num[l]交换，相当于把大的值放到左边，显然无法实现排序。
             while (p < q && nums[q] >= nums[l]) {
                 q--;
@@ -38,12 +39,13 @@ public class _05_QuickSort extends SortUtils implements Sort {
             while (p < q && nums[p] <= nums[l]) {
                 p++;
             }
-            if (p >= q) { // == 也可
+            if (p == q) {
                 break;
             }
             swap(nums, p, q);
         }
-        swap(nums, p, l); // 为nums[l]找到合适的位置p(或q)后交换
+        // 为nums[l]找到合适的位置p(或q)后交换
+        swap(nums, p, l);
 
         quickSort(nums, l, p);
         quickSort(nums, p + 1, r);
