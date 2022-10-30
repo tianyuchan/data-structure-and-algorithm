@@ -10,6 +10,13 @@ package math.bitwise;
 
 
 public class CountingBits {
+    /**
+     * 执行用时：1 ms, 在所有 Java 提交中击败了99.95%的用户
+     * 内存消耗：45.3 MB, 在所有 Java 提交中击败了77.10%的用户
+     * 通过测试用例：15 / 15
+     * @param n
+     * @return
+     */
     public int[] countBits(int n) {
         int[] dp = new int[n + 1];
         for (int i = 0; i <= n; i++) {
