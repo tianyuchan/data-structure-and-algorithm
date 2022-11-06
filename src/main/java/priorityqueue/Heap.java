@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Classname : PriorityQueue
- * @Description : 数组实现优先级队列
+ * @Classname : Heap
+ * @Description : 数组实现最大堆
  * 堆是完全二叉树，用数组表示时，位置 i 的父节点位置为 (i - 1) / 2，左右子节点位置分别为 2 * i + 1 和 2 * i + 2
  * @Author : chentianyu
  * @Date 2022/11/6 21:10
@@ -79,6 +79,8 @@ public class Heap {
      * @param pos
      */
     private void swim(int pos) {
+        // 最小堆
+        //while (pos > 0 && array.get((pos - 1) / 2) > array.get(pos)) {
         while (pos > 0 && array.get((pos - 1) / 2) < array.get(pos)) {
             swap(array, pos, (pos - 1) / 2);
             pos = (pos - 1) / 2;
@@ -97,12 +99,11 @@ public class Heap {
             // 注意优先与较大的子节点交换
             if (i < end && array.get(i + 1) > array.get(i)) i++;
             if (array.get(i) <= array.get(pos)) break;
+            // 最小堆
+            //if (i < end && array.get(i + 1) < array.get(i)) i++;
+            //if (array.get(i) >= array.get(pos)) break;
             swap(array, pos, i);
             pos = i;
         }
     }
-
-
-
-
 }
