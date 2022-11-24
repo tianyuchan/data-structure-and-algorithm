@@ -14,7 +14,7 @@ public class RangeSumQuery2dImmutable {
     private int m;
     private int n;
 
-    public NumMatrix(int[][] matrix) {
+    public RangeSumQuery2dImmutable(int[][] matrix) {
         m = matrix.length;
         n = matrix[0].length;
         sums = new int[m + 1][n + 1];
